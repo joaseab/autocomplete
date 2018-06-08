@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Autocomplete</h2>
+
+<form action="{{ url_for('autocomplete') }}" method="post">
+    <input type="text" name="word" value="{{word_current}}" autocomplete="off">
+    <input type="submit" value="Submit">
+</form>
+
+<font size="2">
+    {% for out_word_i in out_word %}
+        {{ out_word_i }}<br>
+    {% endfor %}
+</font>
+
+</body>
+</html>
