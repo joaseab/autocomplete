@@ -12,7 +12,7 @@ You can run the program interactively in two ways:
 	python appweb.py --corpus <filepath>
 ```
 
-where <filepath> is the path to the corpus file (.csv).
+where *filepath* is the path to the corpus file (.csv).
 
 Optional script arguments:
 
@@ -81,46 +81,38 @@ You need to have flask installed (e.g. install it via pip).
 
 ## Description of the contents
 
-###
-	trie.py
+### trie.py
 
 This module implements the Prefix Tree.
 
-###
-	autocomplete.py
+### autocomplete.py
 
 This module implements the AutoComplete engine, responsible for loading the
-corpus, setting up the prefix trie, and for providing a method that retrieves completions.
+corpus, setting up the prefix tree, and for providing a method that retrieves completions.
 
-###
-	appweb.py
+### appweb.py
 
 This module uses flask and the AutoComplete engine to launch a simple
 web app that retrieves completions when queried.
 
-###
-	appcomm.py
+### appcomm.py
 
 This module is a mockup test of the webapp, to be used at the 
 terminal.
 
-###
-	parsecommands.py
+### parsecommands.py
 
 This module contains utils for parsing the commandline arguments.
 
-###
-	tests.py
+### tests.py
 
 This module uses unittest to test both the trie.py and autocomplete.py
 
-###
-	templates/autocomplete.html
+### templates/autocomplete.html
 
 This is the html template used by flask to receive queries and return results.
 
-###
-	data/*.csv
+### data/*.csv
 
 Contains corpus test data.
 
